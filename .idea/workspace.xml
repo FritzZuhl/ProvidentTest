@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01a0311a-fce3-48ef-8e4f-a635a06cfb82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/intake_pycharm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Provident_Credit_Union_Assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Provident_Credit_Union_Assignment.iml" afterDir="false" />
+    <list default="true" id="01a0311a-fce3-48ef-8e4f-a635a06cfb82" name="Changes" comment="more work done">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_with_features.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intake.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Intake.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mrm5_model_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/mrm5_model_data.xlsx" afterDir="false" />
     </list>
@@ -58,11 +56,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639506343033</updated>
-      <workItem from="1639506347022" duration="1048000" />
+      <workItem from="1639506347022" duration="1329000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="more work done" />
+    <option name="LAST_COMMIT_MESSAGE" value="more work done" />
   </component>
 </project>
