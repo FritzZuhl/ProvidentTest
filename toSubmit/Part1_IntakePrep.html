@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Intake</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Part1_IntakePrep</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -17227,7 +17227,17 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">&#182;</a></h1>
+<h3 id="Provident-Credit-Union-Exercise">Provident Credit Union Exercise<a class="anchor-link" href="#Provident-Credit-Union-Exercise">&#182;</a></h3><blockquote><h4 id="Analyst:-Frederick-$($Fritz$)$-Zuhl">Analyst: Frederick $($Fritz$)$ Zuhl<a class="anchor-link" href="#Analyst:-Frederick-$($Fritz$)$-Zuhl">&#182;</a></h4><h4 id="December-17,-2021">December 17, 2021<a class="anchor-link" href="#December-17,-2021">&#182;</a></h4><h4 id="Part---1---EDA-and-Feature-Preparation">Part   1 - EDA and Feature Preparation<a class="anchor-link" href="#Part---1---EDA-and-Feature-Preparation">&#182;</a></h4><ul>
+<li>#### Check data from completness and general sanity check</li>
+<li>#### EDA and Univarite Analysis - Correlate with Target Variable (Charge-Off)</li>
+<li>#### Apply Binning when needed to increase statistical significance and over-fitting</li>
+</ul>
+<hr>
+<hr>
+<p><br>
+<br></p>
+</blockquote>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -17235,7 +17245,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importing required libraries.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries.</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> <span class="c1">#visualisation</span>
@@ -17254,7 +17264,13 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="Section-1---Read-in-the-data">Section 1 - Read in the data<a class="anchor-link" href="#Section-1---Read-in-the-data">&#182;</a></h2><h3 id="General-Sanity-Checks">General Sanity Checks<a class="anchor-link" href="#General-Sanity-Checks">&#182;</a></h3>
+<hr>
+<h3 id="Part1-/-Section-1---Read-in-the-data">Part1 / Section 1 - Read in the data<a class="anchor-link" href="#Part1-/-Section-1---Read-in-the-data">&#182;</a></h3><ul>
+<li>#### General Sanity Checks</li>
+<li>#### Is data complete? Check for outliers.</li>
+</ul>
+<hr>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -17872,12 +17888,13 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h1 id="%23">#<a class="anchor-link" href="#%23">&#182;</a></h1><h2 id="Section-2">Section 2<a class="anchor-link" href="#Section-2">&#182;</a></h2><ul>
-<li>### Looking at the Variables Individually.</li>
-<li>### How do they compare/correlate/relate to target value COS?</li>
-<li>### Feature Engineering - Transform some fields to improve their predictability and prevent over-fitting within a classification models.</li>
+<h3 id="Part-1-/-Section-2">Part 1 / Section 2<a class="anchor-link" href="#Part-1-/-Section-2">&#182;</a></h3><ul>
+<li>#### Looking at the Variables Individually.</li>
+<li>#### How do they compare/correlate/relate to target value COS?</li>
+<li>#### Feature Engineering - Transform some fields to improve their predictability and prevent over-fitting within a classification models.</li>
 </ul>
-<h4 id="Note:-For-speed,-I-used-Excel-as-a-kind-of-scratch-pad-as-a-side-tool-to-look-at-these-fields,-and-for-some-common-univariate-analysis.-The-Excel-file-is-not-included,-but-is-available-upon-request.">Note: For speed, I used Excel as a kind of scratch pad as a side tool to look at these fields, and for some common univariate analysis. The Excel file is not included, but is available upon request.<a class="anchor-link" href="#Note:-For-speed,-I-used-Excel-as-a-kind-of-scratch-pad-as-a-side-tool-to-look-at-these-fields,-and-for-some-common-univariate-analysis.-The-Excel-file-is-not-included,-but-is-available-upon-request.">&#182;</a></h4>
+<h5 id="Note:-For-speed,-I-used-Excel-as-a-kind-of-scratch-pad-as-a-side-tool-to-look-at-these-fields,-and-for-some-common-univariate-analysis.-The-Excel-file-is-not-included,-but-is-available-upon-request.">Note: For speed, I used Excel as a kind of scratch pad as a side tool to look at these fields, and for some common univariate analysis. The Excel file is not included, but is available upon request.<a class="anchor-link" href="#Note:-For-speed,-I-used-Excel-as-a-kind-of-scratch-pad-as-a-side-tool-to-look-at-these-fields,-and-for-some-common-univariate-analysis.-The-Excel-file-is-not-included,-but-is-available-upon-request.">&#182;</a></h5><hr>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -17949,7 +17966,7 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="TARGET:-COS-"><span style="color:red">TARGET: COS </span><a class="anchor-link" href="#TARGET:-COS-">&#182;</a></h2><h3 id="Account-Charge-Off-Indicator">Account Charge-Off Indicator<a class="anchor-link" href="#Account-Charge-Off-Indicator">&#182;</a></h3><h3 id="Dependent-or-Target-Variable">Dependent or Target Variable<a class="anchor-link" href="#Dependent-or-Target-Variable">&#182;</a></h3><hr>
+<h3 id="TARGET:-COS-"><span style="color:red">TARGET: COS </span><a class="anchor-link" href="#TARGET:-COS-">&#182;</a></h3><h4 id="Account-Charge-Off-Indicator">Account Charge-Off Indicator<a class="anchor-link" href="#Account-Charge-Off-Indicator">&#182;</a></h4><h4 id="Dependent-or-Target-Variable">Dependent or Target Variable<a class="anchor-link" href="#Dependent-or-Target-Variable">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -18020,7 +18037,7 @@ Plot out Values
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="INDEX:-ACCOUNT_ID-"><span style="color:red">INDEX: ACCOUNT_ID </span><a class="anchor-link" href="#INDEX:-ACCOUNT_ID-">&#182;</a></h2><hr>
+<h3 id="ACCOUNT_ID-"><span style="color:red">ACCOUNT_ID </span><a class="anchor-link" href="#ACCOUNT_ID-">&#182;</a></h3><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -18067,9 +18084,15 @@ Number of missing account_id: 0
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Observation: The 'account-id' field is complete and unique. It can be used as an index for data.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="1:-STATUS-"><span style="color:red">1: STATUS </span><a class="anchor-link" href="#1:-STATUS-">&#182;</a></h2><h3 id="Last-status-of-account.">Last status of account.<a class="anchor-link" href="#Last-status-of-account.">&#182;</a></h3><hr>
+<h3 id="1:-STATUS-"><span style="color:red">1: STATUS </span><a class="anchor-link" href="#1:-STATUS-">&#182;</a></h3><h4 id="Latest-status-of-account.">Latest status of account.<a class="anchor-link" href="#Latest-status-of-account.">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -18263,7 +18286,7 @@ All cos positive accounts are closed. Not all closed account are positive 'cos'.
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="2:-LOAN"><span style="color:red">2: LOAN</span><a class="anchor-link" href="#2:-LOAN">&#182;</a></h2><h3 id="Does-account-have-any-loan-product-associated-with-it?">Does account have any loan product associated with it?<a class="anchor-link" href="#Does-account-have-any-loan-product-associated-with-it?">&#182;</a></h3><hr>
+<h3 id="2:-LOAN"><span style="color:red">2: LOAN</span><a class="anchor-link" href="#2:-LOAN">&#182;</a></h3><h4 id="Does-account-have-any-loan-product-associated-with-it?">Does account have any loan product associated with it?<a class="anchor-link" href="#Does-account-have-any-loan-product-associated-with-it?">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -18396,7 +18419,7 @@ cos
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="3:-S_PLUS_C"><span style="color:red">3: S_PLUS_C</span><a class="anchor-link" href="#3:-S_PLUS_C">&#182;</a></h2><h3 id="Is-account-just-savings,-or-savings-and-checking?">Is account just savings, or savings and checking?<a class="anchor-link" href="#Is-account-just-savings,-or-savings-and-checking?">&#182;</a></h3><hr>
+<h3 id="3:-S_PLUS_C"><span style="color:red">3: S_PLUS_C</span><a class="anchor-link" href="#3:-S_PLUS_C">&#182;</a></h3><h4 id="Is-type-of-account-include-only-savings,-or-both-savings-and-checking?">Is type of account include only savings, or both savings and checking?<a class="anchor-link" href="#Is-type-of-account-include-only-savings,-or-both-savings-and-checking?">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -18523,14 +18546,19 @@ cos
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h3 id="Calculations-outside-of-this-notebook-(not-shown-here)">Calculations outside of this notebook (not shown here)<a class="anchor-link" href="#Calculations-outside-of-this-notebook-(not-shown-here)">&#182;</a></h3><h4 id="Prob(cos-yes--%7C--s_plus_c-=-1)-=--0.011356717">Prob(cos yes  |  s_plus_c = 1) =  0.011356717<a class="anchor-link" href="#Prob(cos-yes--%7C--s_plus_c-=-1)-=--0.011356717">&#182;</a></h4><h4 id="Prob(cos-yes--%7C--s_plus_c-=-0)-=--0.004603175">Prob(cos yes  |  s_plus_c = 0) =  0.004603175<a class="anchor-link" href="#Prob(cos-yes--%7C--s_plus_c-=-0)-=--0.004603175">&#182;</a></h4><h4 id="If-an-account-has-a-checking-account,-it-is-much-more-likely-to-result-in-charge-off-than-saving-alone.">If an account has a checking account, it is much more likely to result in charge off than saving alone.<a class="anchor-link" href="#If-an-account-has-a-checking-account,-it-is-much-more-likely-to-result-in-charge-off-than-saving-alone.">&#182;</a></h4><h4 id="Feature-Transform:-None">Feature Transform: None<a class="anchor-link" href="#Feature-Transform:-None">&#182;</a></h4>
+<p>EDA for 's_plus_c' variable was done outside of this notebook (not shown here)<br>
+Prob(cos yes  |  s_plus_c = 1)  =  0.011356717<br>
+Prob(cos yes  |  s_plus_c = 0)  =  0.004603175<br>
+If an account has a checking account, it is much more likely to result in charge off than saving alone.<br>
+Feature Transform: None</p>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="4:-NTRIGGERS"><span style="color:red">4: NTRIGGERS</span><a class="anchor-link" href="#4:-NTRIGGERS">&#182;</a></h2><h3 id="Number-of-alerts-from-other-financial-institutions.">Number of alerts from other financial institutions.<a class="anchor-link" href="#Number-of-alerts-from-other-financial-institutions.">&#182;</a></h3><hr>
+<h3 id="4:-NTRIGGERS"><span style="color:red">4: NTRIGGERS</span><a class="anchor-link" href="#4:-NTRIGGERS">&#182;</a></h3><h4 id="Number-of-alerts-from-other-financial-institutions.">Number of alerts from other financial institutions.<a class="anchor-link" href="#Number-of-alerts-from-other-financial-institutions.">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -18733,14 +18761,15 @@ cos
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h3 id="Feature-Transform:-Bin-into-nt_zero,-nt_small,-nt_large">Feature Transform: Bin into nt_zero, nt_small, nt_large<a class="anchor-link" href="#Feature-Transform:-Bin-into-nt_zero,-nt_small,-nt_large">&#182;</a></h3>
+<p>Feature Transform: Bin into nt_zero, nt_small, nt_large</p>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="5:-NUM_TIMES_NEG"><span style="color:red">5: NUM_TIMES_NEG</span><a class="anchor-link" href="#5:-NUM_TIMES_NEG">&#182;</a></h2><h3 id="Number-of-time-the-account-went-negative.">Number of time the account went negative.<a class="anchor-link" href="#Number-of-time-the-account-went-negative.">&#182;</a></h3><hr>
+<h3 id="5:-NUM_TIMES_NEG"><span style="color:red">5: NUM_TIMES_NEG</span><a class="anchor-link" href="#5:-NUM_TIMES_NEG">&#182;</a></h3><h4 id="Number-of-time-the-account-went-negative.">Number of time the account went negative.<a class="anchor-link" href="#Number-of-time-the-account-went-negative.">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -18947,7 +18976,7 @@ cos
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="6:-MAX_DAYS_NEG"><span style="color:red">6: MAX_DAYS_NEG</span><a class="anchor-link" href="#6:-MAX_DAYS_NEG">&#182;</a></h2><h3 id="Maximum-consecutive-days-account-was-negative.">Maximum consecutive days account was negative.<a class="anchor-link" href="#Maximum-consecutive-days-account-was-negative.">&#182;</a></h3><hr>
+<h3 id="6:-MAX_DAYS_NEG"><span style="color:red">6: MAX_DAYS_NEG</span><a class="anchor-link" href="#6:-MAX_DAYS_NEG">&#182;</a></h3><h4 id="Maximum-consecutive-days-account-was-negative.">Maximum consecutive days account was negative.<a class="anchor-link" href="#Maximum-consecutive-days-account-was-negative.">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -19117,7 +19146,7 @@ Use function bin_max_days_neg() to increase statistical significance and prevent
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="7:-RIM_AGE"><span style="color:red">7: RIM_AGE</span><a class="anchor-link" href="#7:-RIM_AGE">&#182;</a></h2><h3 id="Age-of-the-accout-owner's-membership-in-months">Age of the accout owner's membership in months<a class="anchor-link" href="#Age-of-the-accout-owner's-membership-in-months">&#182;</a></h3><hr>
+<h3 id="7:-RIM_AGE"><span style="color:red">7: RIM_AGE</span><a class="anchor-link" href="#7:-RIM_AGE">&#182;</a></h3><h4 id="Age-of-the-accout-owner's-membership-in-months">Age of the accout owner's membership in months<a class="anchor-link" href="#Age-of-the-accout-owner's-membership-in-months">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -19317,7 +19346,7 @@ Possible transform: f(rim_age) = max(rim_age) - rim_age</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="8:-CK_RETURNS"><span style="color:red">8: CK_RETURNS</span><a class="anchor-link" href="#8:-CK_RETURNS">&#182;</a></h2><h3 id="Number-of-returned-checks-since-Jan.-2017">Number of returned checks since Jan. 2017<a class="anchor-link" href="#Number-of-returned-checks-since-Jan.-2017">&#182;</a></h3><hr>
+<h3 id="8:-CK_RETURNS"><span style="color:red">8: CK_RETURNS</span><a class="anchor-link" href="#8:-CK_RETURNS">&#182;</a></h3><h4 id="Number-of-returned-checks-since-Jan.-2017">Number of returned checks since Jan. 2017<a class="anchor-link" href="#Number-of-returned-checks-since-Jan.-2017">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -19602,7 +19631,7 @@ cos
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="9:-FICO_B"><span style="color:red">9: FICO_B</span><a class="anchor-link" href="#9:-FICO_B">&#182;</a></h2><h3 id="FICO-credit-score">FICO credit score<a class="anchor-link" href="#FICO-credit-score">&#182;</a></h3><hr>
+<h3 id="9:-FICO_B"><span style="color:red">9: FICO_B</span><a class="anchor-link" href="#9:-FICO_B">&#182;</a></h3><h4 id="FICO-credit-score">FICO credit score<a class="anchor-link" href="#FICO-credit-score">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -19865,15 +19894,14 @@ cos
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Fico_b needs to be binned to make the results more statistical significant.</p>
-
+<h4 id="Note:-Fico_b-needs-to-be-binned-to-make-the-results-more-statistical-significant.">Note: Fico_b needs to be binned to make the results more statistical significant.<a class="anchor-link" href="#Note:-Fico_b-needs-to-be-binned-to-make-the-results-more-statistical-significant.">&#182;</a></h4>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="10-and-11:-AVG_BAL6-and-AVG_BAL3"><span style="color:red">10 and 11: AVG_BAL6 and AVG_BAL3</span><a class="anchor-link" href="#10-and-11:-AVG_BAL6-and-AVG_BAL3">&#182;</a></h2><h3 id="Rolling-6-month/3-month-deposit-amount">Rolling 6-month/3-month deposit amount<a class="anchor-link" href="#Rolling-6-month/3-month-deposit-amount">&#182;</a></h3><hr>
+<h3 id="10-and-11:-AVG_BAL6-and-AVG_BAL3"><span style="color:red">10 and 11: AVG_BAL6 and AVG_BAL3</span><a class="anchor-link" href="#10-and-11:-AVG_BAL6-and-AVG_BAL3">&#182;</a></h3><h4 id="Rolling-6-month/3-month-deposit-amount">Rolling 6-month/3-month deposit amount<a class="anchor-link" href="#Rolling-6-month/3-month-deposit-amount">&#182;</a></h4><hr>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -20139,11 +20167,6 @@ cos
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -20201,13 +20224,22 @@ cos
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<hr>
+<h3 id="End-of-Part-1">End of Part 1<a class="anchor-link" href="#End-of-Part-1">&#182;</a></h3><h4 id="Review-data">Review data<a class="anchor-link" href="#Review-data">&#182;</a></h4><h4 id="Write-out-to-CSV-file-for-Part-2---Modeling">Write out to CSV file for Part 2 - Modeling<a class="anchor-link" href="#Write-out-to-CSV-file-for-Part-2---Modeling">&#182;</a></h4><hr>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">columns</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Review data preparation up to this point.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -20223,20 +20255,19 @@ cos
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/g5/th092xjd1mjdn83_j0ww94k00000gn/T/ipykernel_4941/2107504319.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Review data preparation up to this point.</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">.</span>columns<span class="ansi-blue-fg">)</span>
 
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Index([&#39;account_id&#39;, &#39;status&#39;, &#39;cos&#39;, &#39;rim_age&#39;, &#39;loan&#39;, &#39;s_plus_c&#39;, &#39;fico_b&#39;,
-       &#39;ck_returns&#39;, &#39;max_days_neg&#39;, &#39;num_times_neg&#39;, &#39;ntriggers&#39;, &#39;avg_bal6&#39;,
-       &#39;avg_bal3&#39;, &#39;ntriggers_bin&#39;, &#39;num_times_neg_bin&#39;, &#39;max_days_neg_bin&#39;,
-       &#39;rim_age_reverse&#39;, &#39;ck_returns_bin&#39;, &#39;fico_bin&#39;, &#39;avg_bal6_binned&#39;,
-       &#39;avg_bal3_binned&#39;],
-      dtype=&#39;object&#39;)</pre>
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
 </div>
-
 </div>
 
 </div>
@@ -20250,22 +20281,7 @@ cos
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Output</span>
-
 <span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;data_with_features.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
